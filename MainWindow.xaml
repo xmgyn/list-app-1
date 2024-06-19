@@ -1,0 +1,53 @@
+﻿<Window x:Class="List_App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:List_App"
+        mc:Ignorable="d"
+        Title="List App" Height="570" Width="300" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="90" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="60" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+
+        <ScrollViewer x:Name="Scroll" Grid.Column="1" Grid.Row="1" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+            <StackPanel Name="Stack">
+                <CheckBox IsChecked="True" IsEnabled="False">
+                    <TextBlock  Opacity="0.5">Sample</TextBlock>
+                </CheckBox>
+            </StackPanel>
+        </ScrollViewer>
+        <TextBox x:Name="TextB" Grid.Column="1" Grid.Row="3" FontSize="25" TextWrapping="Wrap" KeyDown="TextB_KeyDown"/>
+        <Border Grid.Column="1" Grid.Row="5" BorderThickness="5" CornerRadius="10" BorderBrush="#FF0B1AF9" >
+            <Button Cursor="Hand" FontSize="20" BorderThickness="0" Foreground="White" AutomationProperties.HelpText="Add To List" Click="Add_Click">
+                Add To List
+                <Button.Resources>
+                    <!-- This Needs To Be Placed At App.xaml For Global Apply  -->
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="7"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                        <GradientStop Color="#FF4A3052"/>
+                        <GradientStop Color="#FFF209F3" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Border>
+
+    </Grid>
+</Window>

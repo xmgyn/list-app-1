@@ -1,0 +1,15 @@
+D:\Work\VS Studio\List App\bin\Debug\List App.exe.config
+D:\Work\VS Studio\List App\bin\Debug\List App.exe
+D:\Work\VS Studio\List App\bin\Debug\List App.pdb
+D:\Work\VS Studio\List App\obj\Debug\List App.csproj.AssemblyReference.cache
+D:\Work\VS Studio\List App\obj\Debug\MainWindow.g.cs
+D:\Work\VS Studio\List App\obj\Debug\App.g.cs
+D:\Work\VS Studio\List App\obj\Debug\List App_MarkupCompile.cache
+D:\Work\VS Studio\List App\obj\Debug\List App_MarkupCompile.lref
+D:\Work\VS Studio\List App\obj\Debug\MainWindow.baml
+D:\Work\VS Studio\List App\obj\Debug\List App.g.resources
+D:\Work\VS Studio\List App\obj\Debug\List_App.Properties.Resources.resources
+D:\Work\VS Studio\List App\obj\Debug\List App.csproj.GenerateResource.cache
+D:\Work\VS Studio\List App\obj\Debug\List App.csproj.CoreCompileInputs.cache
+D:\Work\VS Studio\List App\obj\Debug\List App.exe
+D:\Work\VS Studio\List App\obj\Debug\List App.pdb
