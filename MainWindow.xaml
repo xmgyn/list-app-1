@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:List_App"
+        xmlns:local="clr-namespace:List_App" xmlns:view="clr-namespace:List_App.View"
         mc:Ignorable="d"
         Title="List App" Height="570" Width="300" ResizeMode="NoResize">
     <Grid>
@@ -25,9 +25,6 @@
 
         <ScrollViewer x:Name="Scroll" Grid.Column="1" Grid.Row="1" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
             <StackPanel Name="Stack">
-                <CheckBox IsChecked="True" IsEnabled="False">
-                    <TextBlock  Opacity="0.5">Sample</TextBlock>
-                </CheckBox>
             </StackPanel>
         </ScrollViewer>
         <TextBox x:Name="TextB" Grid.Column="1" Grid.Row="3" FontSize="25" TextWrapping="Wrap" KeyDown="TextB_KeyDown"/>

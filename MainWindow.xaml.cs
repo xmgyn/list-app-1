@@ -1,4 +1,5 @@
-﻿using System;
+﻿using List_App.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,49 +16,31 @@ using System.Windows.Shapes;
 
 namespace List_App
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
-        // MainWindow() => InitializeComponent(); This Will Work Too
         public MainWindow()
         {
             InitializeComponent();
-            //EventManager.RegisterClassHandler(typeof(CheckBox), , new RoutedEventHandler(CheckBoxChanged));
         }
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             string text = TextB.Text;
             if (!string.IsNullOrEmpty(text)) {
-                TextBlock textBox = new TextBlock
+                View.ListInput listInput = new View.ListInput()
                 {
-                    Text = text.ToUpper(),
-                    FontSize = 20,
-                    TextWrapping = TextWrapping.Wrap,
+                    Value = text,
+                    Margin = new Thickness(0,5,0,5),
                 };
-                CheckBox tempblock = new CheckBox
-                {
-                    ToolTip = "Mark As Done",
-                    Content = textBox,
-                    Margin = new Thickness(5),
-                    VerticalContentAlignment = VerticalAlignment.Center
-                };
-                Stack.Children.Add(tempblock);
+                Stack.Children.Add(listInput);
                 TextB.Clear();
             }
         }
 
+        // Handle 'ENTER' Press
         private void TextB_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key is Key.Return) Add_Click( this, e);
-        }
-
-        private void CheckBoxChanged(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("sdffjs");
-            //IsEnabled = false;
         }
     }
 }

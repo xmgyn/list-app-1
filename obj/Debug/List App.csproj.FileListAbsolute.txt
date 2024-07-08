@@ -13,3 +13,20 @@ D:\Work\VS Studio\List App\obj\Debug\List App.csproj.GenerateResource.cache
 D:\Work\VS Studio\List App\obj\Debug\List App.csproj.CoreCompileInputs.cache
 D:\Work\VS Studio\List App\obj\Debug\List App.exe
 D:\Work\VS Studio\List App\obj\Debug\List App.pdb
+D:\Work\Play Projects\List App\bin\Debug\List App.exe.config
+D:\Work\Play Projects\List App\bin\Debug\List App.exe
+D:\Work\Play Projects\List App\bin\Debug\List App.pdb
+D:\Work\Play Projects\List App\obj\Debug\List App.csproj.AssemblyReference.cache
+D:\Work\Play Projects\List App\obj\Debug\MainWindow.g.cs
+D:\Work\Play Projects\List App\obj\Debug\View\ListInput.UserControl.g.cs
+D:\Work\Play Projects\List App\obj\Debug\App.g.cs
+D:\Work\Play Projects\List App\obj\Debug\List App_MarkupCompile.cache
+D:\Work\Play Projects\List App\obj\Debug\List App_MarkupCompile.lref
+D:\Work\Play Projects\List App\obj\Debug\MainWindow.baml
+D:\Work\Play Projects\List App\obj\Debug\View\ListInput.UserControl.baml
+D:\Work\Play Projects\List App\obj\Debug\List App.g.resources
+D:\Work\Play Projects\List App\obj\Debug\List_App.Properties.Resources.resources
+D:\Work\Play Projects\List App\obj\Debug\List App.csproj.GenerateResource.cache
+D:\Work\Play Projects\List App\obj\Debug\List App.csproj.CoreCompileInputs.cache
+D:\Work\Play Projects\List App\obj\Debug\List App.exe
+D:\Work\Play Projects\List App\obj\Debug\List App.pdb
