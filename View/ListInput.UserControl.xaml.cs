@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Policy;
@@ -19,19 +20,51 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace List_App.View
 {
-    public partial class ListInput : UserControl
+    public partial class ListInput : UserControl, INotifyPropertyChanged
     {
-        public string Value
+        private string _valueX;
+        private bool _check;
+        private double _opacity = 1;
+        public string ValueX
         {
-            get { return Value; }
+            get { return _valueX; }
             set
             {
-                Textbox.Text = value.ToUpper();
+                _valueX = value;
+                OnPropertyChanged(new PropertyChangedEventArgs("ValueX"));
             }
         }
 
+        public bool CheckBoxChangedX
+        {
+            get { return _check; }
+            set
+            {
+                _check = value;
+                HandleCheck();
+                OnPropertyChanged(new PropertyChangedEventArgs("CheckBoxChangedX"));
+                OnPropertyChanged(new PropertyChangedEventArgs("ValueX_Opacity"));
+            }
+        }
+
+        public double ValueX_Opacity {
+            get { return _opacity; }
+            set
+            {
+                _opacity = value;
+                OnPropertyChanged(new PropertyChangedEventArgs("ValueX_Opacity"));
+            }
+        }
+
+        protected virtual void OnPropertyChanged(PropertyChangedEventArgs e)
+        {
+            PropertyChanged?.Invoke(this, e);
+        }
+
+        // Binding UpdateSourceTrigger
         public ListInput()
         {
+            DataContext = this;
             InitializeComponent();
 
             // Adding Border Color Transitions When Mouse Enters And Leaves
@@ -44,26 +77,14 @@ namespace List_App.View
                 BorderX.BorderBrush = new SolidColorBrush(Colors.LightSteelBlue);
             };
 
-            GridX.MouseDown += (sender, e) =>
-            {
-                bool isChecked = Check.IsChecked ?? true;
-                if(!isChecked)
-                {
-                    Check.IsChecked = true;
-                    Textbox.Opacity = 0.6;
-                }
-                else
-                {
-                    Check.IsChecked = false;
-                    Textbox.Opacity = 1;
-                }
-            };
+            GridX.MouseDown += (sender, e) => CheckBoxChangedX = !(CheckBoxChangedX);  
         }
 
-        private void CheckBoxChanged(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("sdffjs");
-            //IsEnabled = false;
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void HandleCheck() {
+            if(CheckBoxChangedX) ValueX_Opacity = 0.6; 
+            else ValueX_Opacity = 1;
         }
     }
 }

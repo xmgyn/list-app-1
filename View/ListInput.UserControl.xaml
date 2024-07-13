@@ -3,14 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:List_App.View"
+             xmlns:local="clr-namespace:List_App.View" d:DataContext="{d:DesignInstance Type=local:ListInput}"
              mc:Ignorable="d" 
              d:DesignHeight="40" d:DesignWidth="250">
+
     <Grid Name="GridX" Background="White">
         <Border Name="BorderX" BorderThickness="2" CornerRadius="5,5,5,5" BorderBrush="LightSteelBlue" >
         <DockPanel Margin="5,5,5,5">
-            <CheckBox x:Name="Check" ToolTip="Mark As Done" VerticalAlignment="Center"></CheckBox>
-            <TextBlock x:Name="Textbox" FontSize="15" Width="170" FontWeight="DemiBold" TextWrapping="Wrap" Text="{Binding Value}" Margin="5,5,0,5" />
+                <CheckBox x:Name="Check" IsChecked="{Binding CheckBoxChangedX}" ToolTip="Mark As Done" VerticalAlignment="Center"></CheckBox>
+                <TextBlock x:Name="Textbox" FontSize="15" Width="170" FontWeight="DemiBold" TextWrapping="Wrap" Text="{Binding ValueX}" Margin="5,5,0,5" Opacity="{Binding ValueX_Opacity}" />
             <Button Background="Red" Foreground="Black" Content="❌" Width="20" Height="20" FontSize="10"/>
             </DockPanel>
         </Border>

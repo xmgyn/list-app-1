@@ -29,7 +29,7 @@ namespace List_App
             if (!string.IsNullOrEmpty(text)) {
                 View.ListInput listInput = new View.ListInput()
                 {
-                    Value = text,
+                    ValueX = text,
                     Margin = new Thickness(0,5,0,5),
                 };
                 Stack.Children.Add(listInput);
