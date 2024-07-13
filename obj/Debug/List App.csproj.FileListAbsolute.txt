@@ -30,4 +30,3 @@ D:\Work\Play Projects\List App\obj\Debug\List App.csproj.GenerateResource.cache
 D:\Work\Play Projects\List App\obj\Debug\List App.csproj.CoreCompileInputs.cache
 D:\Work\Play Projects\List App\obj\Debug\List App.exe
 D:\Work\Play Projects\List App\obj\Debug\List App.pdb
-D:\Work\Play Projects\List App\obj\Debug\GeneratedInternalTypeHelper.g.cs

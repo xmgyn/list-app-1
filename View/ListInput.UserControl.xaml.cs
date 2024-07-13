@@ -17,6 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using static System.Net.Mime.MediaTypeNames;
+using System.Windows.Media.TextFormatting;
 
 namespace List_App.View
 {
@@ -25,6 +26,7 @@ namespace List_App.View
         private string _valueX;
         private bool _check;
         private double _opacity = 1;
+        public MainWindow _main;
         public string ValueX
         {
             get { return _valueX; }
@@ -43,7 +45,6 @@ namespace List_App.View
                 _check = value;
                 HandleCheck();
                 OnPropertyChanged(new PropertyChangedEventArgs("CheckBoxChangedX"));
-                OnPropertyChanged(new PropertyChangedEventArgs("ValueX_Opacity"));
             }
         }
 
@@ -71,13 +72,15 @@ namespace List_App.View
             GridX.MouseEnter += (sender, e) =>
             {
                 BorderX.BorderBrush = new SolidColorBrush(Colors.SlateBlue);
+                CloseButton.Visibility = Visibility.Visible;
             };
             GridX.MouseLeave += (sender, e) =>
             {
                 BorderX.BorderBrush = new SolidColorBrush(Colors.LightSteelBlue);
+                CloseButton.Visibility = Visibility.Collapsed;
             };
 
-            GridX.MouseDown += (sender, e) => CheckBoxChangedX = !(CheckBoxChangedX);  
+            GridX.MouseDown += (sender, e) => CheckBoxChangedX = !(CheckBoxChangedX); 
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -85,6 +88,11 @@ namespace List_App.View
         private void HandleCheck() {
             if(CheckBoxChangedX) ValueX_Opacity = 0.6; 
             else ValueX_Opacity = 1;
+        }
+
+        private void Close(object sender, RoutedEventArgs e)
+        {
+            _main.Close(this);
         }
     }
 }

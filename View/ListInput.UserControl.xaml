@@ -11,8 +11,8 @@
         <Border Name="BorderX" BorderThickness="2" CornerRadius="5,5,5,5" BorderBrush="LightSteelBlue" >
         <DockPanel Margin="5,5,5,5">
                 <CheckBox x:Name="Check" IsChecked="{Binding CheckBoxChangedX}" ToolTip="Mark As Done" VerticalAlignment="Center"></CheckBox>
-                <TextBlock x:Name="Textbox" FontSize="15" Width="170" FontWeight="DemiBold" TextWrapping="Wrap" Text="{Binding ValueX}" Margin="5,5,0,5" Opacity="{Binding ValueX_Opacity}" />
-            <Button Background="Red" Foreground="Black" Content="❌" Width="20" Height="20" FontSize="10"/>
+                <TextBlock x:Name="Textbox" FontSize="15" Width="210" FontWeight="DemiBold" TextWrapping="Wrap" Text="{Binding ValueX}" Margin="5,5,0,5" Panel.ZIndex="0" Opacity="{Binding ValueX_Opacity}" />
+                <Button Name="CloseButton" Background="Red" Click="Close" Foreground="Black" Content="❌" Width="20" Height="20" FontSize="10" Visibility="Collapsed" Margin="-30,0,0,0" Panel.ZIndex="1"/>
             </DockPanel>
         </Border>
     </Grid>

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -32,6 +33,7 @@ namespace List_App
                     ValueX = text,
                     Margin = new Thickness(0,5,0,5),
                 };
+                listInput._main = this;
                 Stack.Children.Add(listInput);
                 TextB.Clear();
             }
@@ -41,6 +43,11 @@ namespace List_App
         private void TextB_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key is Key.Return) Add_Click( this, e);
+        }
+
+        public void Close(ListInput sender)
+        {
+            Stack.Children.Remove(sender);
         }
     }
 }
