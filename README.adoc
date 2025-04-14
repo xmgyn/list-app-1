@@ -1,0 +1,62 @@
+image::./Docs/logo.png[width=128, height=128] 
+= ***List App 1***
+
+== Project Status
+
+....
+Completed
+....
+
+'''
+
+== Features
+
+. Allows To Add And Delete Entry To The List.
+. Efficiently handle memory by leveraging MVVM.
+
+'''
+
+== Technology Stack And Tools
+
+[cols="1,1"]
+|===
+|Name|Version
+
+|.Net Framework
+|4.7.2
+
+|Visual Studio Community 2022 
+|17.13.6
+|===
+
+'''
+
+== Install/Execute
+
+TIP: Walkthrough Video Is Provided Inside Docs Folder
+
+. Load The SLN File In Visual Studio
+. Build Then Run IT
+
+'''
+
+== Gallery
+
+====
+****
+image::./Docs/1.png[]
+****
+
+****
+image::./Docs/2.png[]
+****
+====
+
+'''
+
+== Author
+
+....
+Mrigayan
+....
+
